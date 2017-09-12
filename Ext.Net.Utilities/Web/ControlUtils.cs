@@ -465,7 +465,7 @@ namespace Ext.Net.Utilities
                 {
                     found = c;
                 }
-                else if (ControlUtils.HasControls(c) && (exclude.IsEmpty() || !exclude.Equals(tempClientID)))
+                else if (ControlUtils.HasControls(c) && (exclude.IsEmptyOrNull() || !exclude.Equals(tempClientID)))
                 {
                     found = ControlUtils.FindChildControlByClientID(c, clientID);
                 }

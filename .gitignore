@@ -1,4 +1,4 @@
-bin/
+﻿bin/
 obj/
 Ext.Net.Utilities/obj/
 Ext.Net.Utilities/bin/
@@ -11,3 +11,5 @@ Ext.Net.Utilities/bin/
 /Ext.Net.Utilities/DateTime/.DS_Store
 
 /Ext.Net.Utilities/Object/.DS_Store
+
+.vs/

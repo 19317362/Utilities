@@ -252,7 +252,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static bool IsNotEmpty(this string text)
         {
-            return !text.IsEmpty();
+            return !text.IsEmptyOrNull();
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Ext.Net.Utilities
         [Description("Return a sub array of this string array.")]
         public static string Between(this string text, string start, string end)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -364,7 +364,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string Chop(this string text, int characters)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -378,7 +378,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string Chop(this string text, string character)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -397,7 +397,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string ToMD5Hash(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -423,7 +423,7 @@ namespace Ext.Net.Utilities
         /// <param name="text">The text to convert to sentence case</param>
         public static string ToTitleCase(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -438,7 +438,7 @@ namespace Ext.Net.Utilities
         /// <param name="text">The text to convert to sentence case</param>
         public static string ToTitleCase(this string text, CultureInfo ci)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -479,7 +479,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static bool IsLowerCamelCase(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return false;
             }
@@ -494,7 +494,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string ToLowerCamelCase(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -524,7 +524,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string ToCamelCase(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -566,7 +566,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string PadLeft(this string text, char c, Int32 totalLength)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -592,7 +592,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string PadRight(this string text, char c, Int32 totalLength)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -610,7 +610,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string LeftOf(this string text, char c)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -630,7 +630,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string LeftOf(this string text, string value)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -650,7 +650,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string LeftOf(this string text, char c, int n)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -675,7 +675,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string RightOf(this string text, char c)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -695,7 +695,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string RightOf(this string text, string value)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -715,7 +715,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string RightOf(this string text, char c, int n)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -740,7 +740,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string RightOf(this string text, string c, int n)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -768,7 +768,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string LeftOfRightmostOf(this string text, char c)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -791,7 +791,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string LeftOfRightmostOf(this string text, string value)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -814,7 +814,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string RightOfRightmostOf(this string text, char c)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -837,7 +837,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string RightOfRightmostOf(this string text, string value)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -861,7 +861,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string ReplaceLastInstanceOf(this string text, string oldValue, string newValue)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -874,7 +874,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         public static string ToCharacterSeparatedFileName(this string name, char separator, string extension)
         {
-            if (name.IsEmpty())
+            if (name.IsEmptyOrNull())
             {
                 return name;
             }
@@ -905,7 +905,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string Enquote(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }
@@ -963,7 +963,7 @@ namespace Ext.Net.Utilities
         /// <returns></returns>
         public static string EnsureSemiColon(this string text)
         {
-            if (text.IsEmpty())
+            if (text.IsEmptyOrNull())
             {
                 return text;
             }

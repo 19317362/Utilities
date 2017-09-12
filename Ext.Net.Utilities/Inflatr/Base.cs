@@ -126,7 +126,7 @@ namespace Ext.Net.Utilities.Inflatr
         /// <returns></returns>
         protected int LastIndexOf(Regex pattern, string input)
         {
-            if (input.IsEmpty())
+            if (input.IsEmptyOrNull())
             {
                 input = this.input;
             }
