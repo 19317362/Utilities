@@ -240,7 +240,7 @@ namespace Ext.Net.Utilities
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public static bool IsEmpty(this string text)
+        public static bool IsEmptyOrNull(this string text)
         {
             return string.IsNullOrEmpty(text);
         }
